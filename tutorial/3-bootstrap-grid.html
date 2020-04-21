@@ -1,0 +1,123 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+
+<h1>Bootstrap</h1>
+
+<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.</p>
+
+<p>It offers us many different components like Jumbotrons, Navbars, Alerts etc. But the most powerful feature of Bootstrap is so called - Bootstrap Grid</p>
+
+
+<p>In nutshell, it's a mechanism which allows us to create a responsive website. The Bootstrap grid allows us to define rows, and each row consists of up to 12 columns. 
+</p>
+
+<img src="assets/bootstrap-intro1.png" alt="">
+
+<p>You can either use one column that will be 12 blocks long or use multiple smaller blocks. The only rule is that you cannot exceed more than 12 blocks in a row. Blocks don't have to be equal: 
+</p>
+
+<img src="assets/bootstrap-intro2.png" alt="">
+
+
+
+<h2>Bootstrap Grid</h2>
+
+<p>To better understand what grid is let's use an example. Let's create new html file with the following content:</p>
+
+
+<pre><code>
+
+&lt;!doctype html&gt;&#13;&#10;&lt;html lang=&quot;en&quot;&gt;&#13;&#10;    &lt;head&gt;&#13;&#10;    &lt;!-- Required meta tags --&gt;&#13;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#13;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!-- Bootstrap CSS --&gt;&#13;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;&#13;&#10;&#13;&#10;    &lt;title&gt;Hello, world!&lt;/title&gt;&#13;&#10;    &lt;/head&gt;&#13;&#10;    &lt;body&gt;&#13;&#10;    &lt;h1&gt;Hello, world!&lt;/h1&gt;&#13;&#10;&#13;&#10;    &lt;!-- Optional JavaScript --&gt;&#13;&#10;    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;&#13;&#10;    &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;/body&gt;&#13;&#10;&lt;/html&gt;
+
+</code></pre>
+
+
+<p>This basic starter loads Bootstrap's css and js files as well as required dependencies (popper.js and jQuery , we will have separate tutorial on jQuery)</p>
+
+<p>Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. Below is an example followed by an in-depth look at how the grid comes together.</p>
+
+
+<p>Paste following code to the body of our page:</p>
+
+<pre><code>
+    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;          &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;          &lt;div class=&quot;col-8&quot;&gt;col-8&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-4&quot;&gt;col-4&lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;      &lt;/div&gt;
+    </code></pre>
+
+<p>and let's add some styles so we could actually see our columns (it will be applied to all classes containing "col" in it's name):</p>
+
+<pre><code>
+    div[class*=col] {
+        padding: 1rem;
+        background-color: #33b5e5;
+        border: 2px solid #fff;
+        color: #fff;
+        text-align: center;
+      }
+</code></pre>
+
+<p>As you can see we are using 
+
+    <ul>
+        <li>containers - they provide a means to center and horizontally pad your site’s contents. We can use <i>.container</i> (with margins) or <i>.container-fluid</i> for width: 100% </li>
+        <li>rows  - they are wrappers for columns. Columns width in a row should always sum up to 12.</li>
+        <li>columns -classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use .col-4. </li>
+    </ul>
+</p>
+
+<p>As you can clearly see - we can either use <i>.col</i> class without specifying it's size (it's so called auto layout), or verbosely set it's size using <i>.col-x</i> where x is number between 1-12.  </p>
+
+<p>But the real power of Bootstrap comes from break points.  </p>
+
+<p>Bootstrap is developed to be mobile—first, so it uses a handful of media queries to
+    create sensible breakpoints for our layouts. These<b> breakpoints are mostly based on minimum viewport widths</b>
+    and allow you to scale up elements as the viewport changes.</p>
+
+<p>We can specify different breakpoints to each column.</p>
+
+<img src="assets/grid-options.jpg" alt="">
+
+
+    <p>This is one of the most important features — in other words:&nbsp;<b>you can define a different column size for different screen sizes</b>.&nbsp; Bootstrap lists 5 different screen sizes, extra small (<b>default</b>), small (<b>sm</b>),
+        medium (<b>md</b>), large (<b>lg</b>)&nbsp; and extra large (<b>xl</b>).&nbsp; Each size has a breaking point defined
+        according to the table below:</p>
+
+
+<p>Example:</p>
+
+
+<pre><code>
+    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;          &lt;div class=&quot;col-sm&quot;&gt;&#13;&#10;            One of three columns&#13;&#10;          &lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-sm&quot;&gt;&#13;&#10;            One of three columns&#13;&#10;          &lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-sm&quot;&gt;&#13;&#10;            One of three columns&#13;&#10;          &lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;
+</code></pre>
+
+
+<p>Let's resize window:</p>
+<img src="assets/col-sm.gif" alt="">
+
+<p>As you can see our layout breaks at small (sm) screen size. No need to write custom queries. </p>
+
+
+
+<p>Since columns can have mutliple classes we can modify it's size differently on different screens:</p>
+
+
+<p>Examples:</p>
+
+<pre><code>
+    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;          &lt;div class=&quot;col-xl-1 col-lg-2 col-md-4 col-sm-6 col-xs-12&quot;&gt;.col-xl-1 .col-lg-2 .col-md-4 .col-sm-6 .col-xs-12&lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;      &lt;/div&gt;
+</code></pre>
+
+
+<img src="assets/colsize.gif" alt="">
+
+<p>I hope that you now you can understand how easy it is to build responsive components using Bootstrap. Let's get back to our app. We want to create a two—column layout which will be visible on the desktop (extra large and large) as well as tablets in horizontal aspect (medium). For smaller screen sizes we want our columns to nest one below the other.</p>
+
+<p>You can check more examples <a href="https://mdbootstrap.com/docs/jquery/layout/grid-usage/">here.</a></p>
+
+
+
+<p>Let's learn now about other <a href="4-bootstrap-components.html">features and components</a>. </p>
+

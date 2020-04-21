@@ -1,0 +1,129 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+
+
+<h1>Landing page</h1>
+
+
+
+<h2>Starter</h2>
+
+In order to start, paste following template into new file, or open <i>index.html</i> file inside the <i>starter</i> folder. 
+
+
+<pre><code>
+    &lt;!doctype html&gt;&#13;&#10;    &lt;html lang=&quot;en&quot;&gt;&#13;&#10;    &#13;&#10;    &lt;head&gt;&#13;&#10;      &lt;!-- Required meta tags --&gt;&#13;&#10;      &lt;meta charset=&quot;utf-8&quot;&gt;&#13;&#10;      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;&#13;&#10;    &#13;&#10;    &lt;!-- Font Awesome --&gt;&#13;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.2/css/all.css&quot;&gt;&#13;&#10;    &lt;!-- Google Fonts --&gt;&#13;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap&quot;&gt;&#13;&#10;    &lt;!-- Bootstrap core CSS --&gt;&#13;&#10;    &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;&#13;&#10;    &lt;!-- Material Design Bootstrap --&gt;&#13;&#10;    &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css&quot; rel=&quot;stylesheet&quot;&gt;&#13;&#10;      &lt;title&gt;Bootstrap tutorial by MDB!&lt;/title&gt;&#13;&#10;    &lt;/head&gt;&#13;&#10;    &#13;&#10;    &lt;body&gt;&#13;&#10;    &#13;&#10;    &#13;&#10;    &#13;&#10;    &lt;!-- JQuery --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- Bootstrap tooltips --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- Bootstrap core JavaScript --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- MDB core JavaScript --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;/body&gt;&#13;&#10;    &#13;&#10;    &lt;/html&gt;
+</code></pre>
+
+
+
+<h2>Base structure</h2>
+
+<p>Let's divide our website into three logical parts - head,er main, and footer:</p>
+
+<pre><code>
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;&#13;&#10;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&lt;main&gt;&#13;&#10;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&#13;&#10;&lt;!--Footer--&gt;&#13;&#10;&lt;footer&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--Footer--&gt;
+</code></pre>
+
+
+<h2>Video intro</h2>
+
+<p>In order to create nice intro to our page (similar to what we've built in a <a href="https://github.com/mdbootstrap/HTML-and-CSS-tutorial-for-beginners">previous HTML&CSS tutorial</a> ) but with video in the background and navbar let's paste following code to our header:
+</p>
+
+<pre><code>
+ &lt;!-- Main navigation --&gt;&#13;&#10; &lt;header&gt;&#13;&#10;    &lt;!-- Navbar --&gt;&#13;&#10;    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar&quot;&gt;&#13;&#10;      &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarTogglerDemo02&quot;&#13;&#10;          aria-controls=&quot;navbarTogglerDemo02&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&#13;&#10;          &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&#13;&#10;        &lt;/button&gt;&#13;&#10;        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarTogglerDemo02&quot;&gt;&#13;&#10;          &lt;ul class=&quot;navbar-nav mr-auto smooth-scroll&quot;&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#intro&quot;&gt;Home&#13;&#10;              &lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#about&quot; data-offset=&quot;90&quot;&gt;About&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#projects&quot; data-offset=&quot;90&quot;&gt;Projects&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#gallery&quot; data-offset=&quot;90&quot;&gt;Gallery&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#testimonials&quot; data-offset=&quot;30&quot;&gt;Testimonials&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#articles&quot; data-offset=&quot;90&quot;&gt;Articles&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot; href=&quot;#contact&quot; data-offset=&quot;90&quot;&gt;Contact&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;          &lt;/ul&gt;&#13;&#10;          &lt;!-- Social Icon  --&gt;&#13;&#10;          &lt;ul class=&quot;navbar-nav nav-flex-icons&quot;&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot;&gt;&#13;&#10;                &lt;i class=&quot;fab fa-facebook-f light-green-text-2&quot;&gt;&lt;/i&gt;&#13;&#10;              &lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot;&gt;&#13;&#10;                &lt;i class=&quot;fab fa-twitter light-green-text-2&quot;&gt;&lt;/i&gt;&#13;&#10;              &lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;              &lt;a class=&quot;nav-link&quot;&gt;&#13;&#10;                &lt;i class=&quot;fab fa-instagram light-green-text-2&quot;&gt;&lt;/i&gt;&#13;&#10;              &lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;          &lt;/ul&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;      &lt;/div&gt;&#13;&#10;    &lt;/nav&gt;&#13;&#10;    &lt;!-- Navbar --&gt;&#13;&#10;    &lt;!-- Full Page Intro --&gt;&#13;&#10;    &lt;div class=&quot;view&quot;&gt;&#13;&#10;      &lt;video class=&quot;video-intro&quot; poster=&quot;https://mdbootstrap.com/img/Photos/Others/background.jpg&quot; playsinline autoplay&#13;&#10;        muted loop&gt;&#13;&#10;        &lt;source src=&quot;https://mdbootstrap.com/img/video/animation.mp4&quot; type=&quot;video/mp4&quot;&gt;&#13;&#10;      &lt;/video&gt;&#13;&#10;      &lt;!-- Mask &amp; flexbox options--&gt;&#13;&#10;      &lt;div class=&quot;mask rgba-gradient d-flex justify-content-center align-items-center&quot;&gt;&#13;&#10;        &lt;!-- Content --&gt;&#13;&#10;        &lt;div class=&quot;container px-md-3 px-sm-0&quot;&gt;&#13;&#10;          &lt;!--Grid row--&gt;&#13;&#10;          &lt;div class=&quot;row wow fadeIn&quot;&gt;&#13;&#10;            &lt;!--Grid column--&gt;&#13;&#10;            &lt;div class=&quot;col-md-12 mb-4 white-text text-center wow fadeIn&quot;&gt;&#13;&#10;              &lt;h3 class=&quot;display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5&quot;&gt;Creative Agency&lt;/h3&gt;&#13;&#10;              &lt;hr class=&quot;hr-light my-4 w-75&quot;&gt;&#13;&#10;              &lt;h4 class=&quot;subtext-header mt-2 mb-4&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit deleniti&#13;&#10;                consequuntur nihil.&lt;/h4&gt;&#13;&#10;              &lt;a href=&quot;#!&quot; class=&quot;btn btn-rounded btn-outline-white&quot;&gt;&#13;&#10;                &lt;i class=&quot;fas fa-home &quot;&gt;&lt;/i&gt; Visit us&#13;&#10;              &lt;/a&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--Grid column--&gt;&#13;&#10;          &lt;/div&gt;&#13;&#10;          &lt;!--Grid row--&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- Content --&gt;&#13;&#10;      &lt;/div&gt;&#13;&#10;      &lt;!-- Mask &amp; flexbox options--&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!-- Full Page Intro --&gt;&#13;&#10;  &lt;/header&gt;&#13;&#10;  &lt;!--Main Navigation--&gt;
+</code></pre>
+
+
+<p>and add the following styles: </p>
+
+<pre><code>
+    /* Required for full background image */
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+    
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 100vh;
+      }
+    }
+    
+    .top-nav-collapse {
+      background-color: #563e91 !important;
+    }
+    
+    .navbar:not(.top-nav-collapse) {
+      background: transparent !important;
+    }
+    
+    @media (max-width: 991px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #563e91 !important;
+      }
+    }
+    
+    .rgba-gradient {
+      background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+      background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+      background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    }
+</code></pre>
+
+<p>This will give us stunning and responsive video intro:</p>
+
+
+<img src="assets/intro.gif" alt="">
+
+<p>You can browser and check other intros <a href="https://mdbootstrap.com/docs/jquery/sections/intros/#v-6">here</a></p>
+
+<h2>Section about:</h2>
+
+<p>Paste following code into the main part:</p>
+
+
+<pre><code>
+
+    &lt;!--Section: about--&gt;&#13;&#10;    &lt;section id=&quot;about&quot; class=&quot;py-5&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!-- Container --&gt;&#13;&#10;        &lt;div class=&quot;container&quot;&gt;&#13;&#10;          &lt;!-- Section heading --&gt;&#13;&#10;          &lt;h2 class=&quot;h1-responsive font-weight-bold text-center mb-5&quot;&gt;Why is it so great?&lt;/h2&gt;&#13;&#10;          &lt;!-- Section description --&gt;&#13;&#10;          &lt;p class=&quot;lead grey-text text-center w-responsive mx-auto mb-5&quot;&gt;Lorem ipsum dolor sit amet,&#13;&#10;            consectetur&#13;&#10;            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim&#13;&#10;            ad&#13;&#10;            minim veniam.&lt;/p&gt;&#13;&#10;  &#13;&#10;          &lt;!-- Grid row --&gt;&#13;&#10;          &lt;div class=&quot;row&quot;&gt;&#13;&#10;  &#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;            &lt;div class=&quot;col-lg-5 text-center text-lg-left&quot;&gt;&#13;&#10;              &lt;img class=&quot;img-fluid&quot; src=&quot;https://mdbootstrap.com/img/Photos/Others/screens-section.jpg&quot;&#13;&#10;                alt=&quot;Sample image&quot;&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;            &lt;div class=&quot;col-lg-7&quot;&gt;&#13;&#10;  &#13;&#10;              &lt;!-- Grid row --&gt;&#13;&#10;              &lt;div class=&quot;row mb-3&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-1&quot;&gt;&#13;&#10;                  &lt;i class=&quot;fas fa-share fa-lg indigo-text&quot;&gt;&lt;/i&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-xl-10 col-md-11 col-10&quot;&gt;&#13;&#10;                  &lt;h5 class=&quot;font-weight-bold mb-3&quot;&gt;Safety&lt;/h5&gt;&#13;&#10;                  &lt;p class=&quot;grey-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit enim ad&#13;&#10;                    minima veniam, quis nostrum exercitationem ullam. Reprehenderit maiores aperiam&#13;&#10;                    assumenda deleniti hic.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!-- Grid row --&gt;&#13;&#10;  &#13;&#10;              &lt;!-- Grid row --&gt;&#13;&#10;              &lt;div class=&quot;row mb-3&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-1&quot;&gt;&#13;&#10;                  &lt;i class=&quot;fas fa-share fa-lg indigo-text&quot;&gt;&lt;/i&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-xl-10 col-md-11 col-10&quot;&gt;&#13;&#10;                  &lt;h5 class=&quot;font-weight-bold mb-3&quot;&gt;Technology&lt;/h5&gt;&#13;&#10;                  &lt;p class=&quot;grey-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit enim ad&#13;&#10;                    minima veniam, quis nostrum exercitationem ullam. Reprehenderit maiores aperiam&#13;&#10;                    assumenda deleniti hic.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!-- Grid row --&gt;&#13;&#10;  &#13;&#10;              &lt;!--Grid row--&gt;&#13;&#10;              &lt;div class=&quot;row&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-1&quot;&gt;&#13;&#10;                  &lt;i class=&quot;fas fa-share fa-lg indigo-text&quot;&gt;&lt;/i&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;                &lt;div class=&quot;col-xl-10 col-md-11 col-10&quot;&gt;&#13;&#10;                  &lt;h5 class=&quot;font-weight-bold mb-3&quot;&gt;Finance&lt;/h5&gt;&#13;&#10;                  &lt;p class=&quot;grey-text mb-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit enim&#13;&#10;                    ad minima veniam, quis nostrum exercitationem ullam. Reprehenderit maiores aperiam&#13;&#10;                    assumenda deleniti hic.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!--Grid row--&gt;&#13;&#10;  &#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--Grid column--&gt;&#13;&#10;  &#13;&#10;          &lt;/div&gt;&#13;&#10;          &lt;!-- Grid row --&gt;&#13;&#10;  &#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- Container --&gt;&#13;&#10;  &#13;&#10;    &lt;/section&gt;&#13;&#10;    &lt;!--Section: about--&gt;
+</code></pre>
+
+<img src="assets/about-section.jpg" alt="">
+
+<p>Let's stop here for a second. You may noticed that we've built this using:
+    <ul>
+        <li>Bootstrap container to center section on the screen</li>
+        <li>Some headings and paragraphs utilizing text classes</li>
+        <li>Bootstrap grid with two unequal columns to achieve proportion and mobile responsiveness </li>
+        <li>Image and icons</li>
+    </ul>
+</p>
+
+<p>That's easy, isn't it?</p>
+
+<p>Another point - as you noticed we are using section tag. It doesn't affect our page at all, it's like an empty div but it helps us to browser through the code much easier.</p>
+
+
+<h2>Projects sections</h2>
+
+
+<pre><code>
+
+    &lt;!--Section: projects--&gt;&#13;&#10;    &lt;section id=&quot;projects&quot; class=&quot;text-center py-5&quot; style=&quot;background-color: #eee;&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!-- Container --&gt;&#13;&#10;        &lt;div class=&quot;container&quot;&gt;&#13;&#10;  &#13;&#10;          &lt;!-- Section heading --&gt;&#13;&#10;          &lt;h2 class=&quot;h1-responsive font-weight-bold mb-5&quot;&gt;Our best projects&lt;/h2&gt;&#13;&#10;          &lt;!-- Section description --&gt;&#13;&#10;          &lt;p class=&quot;grey-text w-responsive mx-auto mb-5&quot;&gt;Duis aute irure dolor in reprehenderit in&#13;&#10;            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat&#13;&#10;            cupidatat non proident, sunt in culpa qui officia deserunt mollit est laborum.&lt;/p&gt;&#13;&#10;  &#13;&#10;          &lt;!-- Grid row --&gt;&#13;&#10;          &lt;div class=&quot;row text-center&quot;&gt;&#13;&#10;  &#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;            &lt;div class=&quot;col-lg-4 col-md-12 mb-lg-0 mb-4&quot;&gt;&#13;&#10;  &#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;              &lt;div class=&quot;card&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card image --&gt;&#13;&#10;                &lt;div class=&quot; overlay&quot;&gt;&#13;&#10;                  &lt;img class=&quot;card-img-top&quot; src=&quot;https://mdbootstrap.com/img/Photos/Others/images/58.jpg&quot;&#13;&#10;                    alt=&quot;Card image cap&quot;&gt;&#13;&#10;                  &lt;a href=&quot;#!&quot;&gt;&#13;&#10;                    &lt;div class=&quot;mask rgba-white-slight&quot;&gt;&lt;/div&gt;&#13;&#10;                  &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card content --&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;  &#13;&#10;                  &lt;!-- Title --&gt;&#13;&#10;                  &lt;h4 class=&quot;card-title&quot;&gt;Title of the new&lt;/h4&gt;&#13;&#10;                  &lt;!-- Text --&gt;&#13;&#10;                  &lt;p class=&quot;card-text&quot;&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum&#13;&#10;                    necessitatibus saepe eveniet ut et voluptates repudiandae.&lt;/p&gt;&#13;&#10;                  &lt;!-- Button --&gt;&#13;&#10;                  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt; View project&lt;/a&gt;&#13;&#10;  &#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;  &#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;            &lt;div class=&quot;col-lg-4 col-md-6 mb-md-0 mb-4&quot;&gt;&#13;&#10;  &#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;              &lt;div class=&quot;card&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card image --&gt;&#13;&#10;                &lt;div class=&quot; overlay&quot;&gt;&#13;&#10;                  &lt;img class=&quot;card-img-top&quot; src=&quot;https://mdbootstrap.com/img/Photos/Others/project4.jpg&quot;&#13;&#10;                    alt=&quot;Card image cap&quot;&gt;&#13;&#10;                  &lt;a href=&quot;#!&quot;&gt;&#13;&#10;                    &lt;div class=&quot;mask rgba-white-slight&quot;&gt;&lt;/div&gt;&#13;&#10;                  &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card content --&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;  &#13;&#10;                  &lt;!-- Title --&gt;&#13;&#10;                  &lt;h4 class=&quot;card-title&quot;&gt;Title of the new&lt;/h4&gt;&#13;&#10;                  &lt;!-- Text --&gt;&#13;&#10;                  &lt;p class=&quot;card-text&quot;&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum&#13;&#10;                    necessitatibus saepe eveniet ut et voluptates repudiandae.&lt;/p&gt;&#13;&#10;                  &lt;!-- Button --&gt;&#13;&#10;                  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt; View project&lt;/a&gt;&#13;&#10;  &#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;  &#13;&#10;  &#13;&#10;  &#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;            &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;&#13;&#10;  &#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;              &lt;div class=&quot;card&quot;&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card image --&gt;&#13;&#10;                &lt;div class=&quot; overlay&quot;&gt;&#13;&#10;                  &lt;img class=&quot;card-img-top&quot; src=&quot;https://mdbootstrap.com/img/Photos/Others/images/88.jpg&quot;&#13;&#10;                    alt=&quot;Card image cap&quot;&gt;&#13;&#10;                  &lt;a href=&quot;#!&quot;&gt;&#13;&#10;                    &lt;div class=&quot;mask rgba-white-slight&quot;&gt;&lt;/div&gt;&#13;&#10;                  &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;                &lt;!-- Card content --&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;  &#13;&#10;                  &lt;!-- Title --&gt;&#13;&#10;                  &lt;h4 class=&quot;card-title&quot;&gt;Title of the news&lt;/h4&gt;&#13;&#10;                  &lt;!-- Text --&gt;&#13;&#10;                  &lt;p class=&quot;card-text&quot;&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum&#13;&#10;                    necessitatibus saepe eveniet ut et voluptates repudiandae.&lt;/p&gt;&#13;&#10;                  &lt;!-- Button --&gt;&#13;&#10;                  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;View project&lt;/a&gt;&#13;&#10;  &#13;&#10;                &lt;/div&gt;&#13;&#10;  &#13;&#10;              &lt;/div&gt;&#13;&#10;              &lt;!-- Card --&gt;&#13;&#10;  &#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- Grid column --&gt;&#13;&#10;  &#13;&#10;          &lt;/div&gt;&#13;&#10;          &lt;!-- Grid row --&gt;&#13;&#10;  &#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- Container --&gt;&#13;&#10;  &#13;&#10;    &lt;/section&gt;&#13;&#10;    &lt;!--Section: projects--&gt;
+</code></pre>
+
+<img src="assets/projects-section.jpg" alt="">
+
+<p>This one you also already know , right? Simple, heading, paragraph, a bit of grid (3 columns) and bootstrap cards and what an amazing effect!</p>
+
+

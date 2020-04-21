@@ -1,0 +1,205 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+
+
+<h1>Responsive design</h1>
+
+<p>Now when you know basics of HTML, CSS and JS you are ready to start developing real websites and applications.</p>
+
+<p>In 2020 people browse web on many different ways. Mostly on mobile, but not only. Therefore we have to make sure that our website looks great regardless of device and screen size on which it is displayed.</p>
+
+<p>In the past some websites were offering 2 versions - one for desktop users, and one for mobile (and some like Facebook , are still doing this.). This of course solves our issue but it also require to have two separate version of the same page. Two teams to maintain and develop it etc.  </p>
+
+<p>Instead of creating two version of our web page, we can use so called Responsive Web Design in our project.</p>
+
+
+
+<h2>Responsive Web Design</h2>
+
+
+
+<p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones):
+</p>
+
+
+
+
+<h2>Viewport</h2>
+
+<p>When making responsive web pages, add the following <meta> element in all your web pages:</p>
+
+
+<pre><code>
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#13;&#10;
+</code></pre>
+
+
+<p>Let's check following example. Create index.html file and paste the following content:</p>
+
+
+<pre><code>
+&lt;!DOCTYPE html&gt;&#13;&#10;&lt;html&gt;&#13;&#10;&#13;&#10;&lt;head&gt;&#13;&#10;&#13;&#10;&lt;/head&gt;&#13;&#10;&#13;&#10;&lt;body&gt;&#13;&#10;&#13;&#10;    &lt;img src=&quot;https://mdbootstrap.com/img/Others/documentation/3.jpg&quot; width=&quot;350&quot;&gt;&#13;&#10;&#13;&#10;    &lt;p&gt;&#13;&#10;    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore&#13;&#10;    magna aliquam erat volutpat.&#13;&#10;    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo&#13;&#10;    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore&#13;&#10;    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril&#13;&#10;    delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil&#13;&#10;    imperdiet doming id quod mazim placerat facer possim assum.&#13;&#10;    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim&#13;&#10;    assum.&#13;&#10;    &lt;/p&gt;&#13;&#10;&#13;&#10;&lt;/body&gt;&#13;&#10;&#13;&#10;&lt;/html&gt; 
+</code></pre>
+
+<p>Now let's check how it looks on desktop:</p>
+
+<img src="assets/desktop-no-viewport.jpg" alt="">
+
+<p>Pretty decent. But how does it look like on the mobile? We will use Google chrome developer tools to emulate iPhoneX:</p>
+
+<img src="assets/mobile-no-viewport.jpg" alt="">
+
+<p>If we zoom in to see the image, is moving outside the window. Let's add our meta into the head section:</p>
+
+<pre><code>
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#13;&#10;
+</code></pre>
+
+<img src="assets/mobile-viewport.jpg" alt="">
+
+<p>Now our browser knows that it should scale page to the screen size. This <i>content="width=device-width</i> tells browser to user device screen size (resolution) as default size for entire content. </p>
+
+
+<h2>Media queries</h2>
+
+
+<p>Since RWD become a standard for modern development, also HTML/CSS evolved to make RWD development easier. Let's gave a look at media queries in CSS </p>
+
+<p>Let's add following css code to our code: </p>
+
+
+<pre><code>
+    body {
+      background-color: lightcyan;
+    }
+    
+    @media screen and (max-width: 992px) {
+      body {
+        background-color: lavender;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      body {
+        background-color: mistyrose;
+      }
+    }
+
+</code></pre>
+
+<p>Now let's resize our window</p>
+
+<img src="assets/media-queries-background.gif" alt=""> 
+
+<p>Probably you already realized. Media queries allows us to applies different styles depending on screen size.</p>
+
+<p>In our particular case used values 992px and 600px. They are what we call "typical breakpoints" for devices. What does it mean?  </p>
+
+<p>These 3 points are considered as border point between mobile, tablet and desktop screen size. </p>
+
+<p>You already know that CSS is very powerful and we can adjust almost anything on our page. </p>
+
+<p>There is no surprise that in combination with media queries we can crate a totally different layouts for our page i.e.:</p>
+
+<p>Replace existing styles with the following:</p>
+
+<pre><code>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column {
+          float: left;
+          width: 25%;
+          padding: 20px;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        @media screen and (max-width: 992px) {
+          .column {
+            width: 50%;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+</code></pre>
+
+
+<p>Now replace content (body) of our page:</p>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;column&quot; style=&quot;background-color:#999;&quot;&gt;&#13;&#10;        &lt;h2&gt;Column 1&lt;/h2&gt;&#13;&#10;        &lt;p&gt;Some text..&lt;/p&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &#13;&#10;    &lt;div class=&quot;column&quot; style=&quot;background-color:#888;&quot;&gt;&#13;&#10;        &lt;h2&gt;Column 2&lt;/h2&gt;&#13;&#10;        &lt;p&gt;Some text..&lt;/p&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &#13;&#10;    &lt;div class=&quot;column&quot; style=&quot;background-color:#777;&quot;&gt;&#13;&#10;        &lt;h2&gt;Column 3&lt;/h2&gt;&#13;&#10;        &lt;p&gt;Some text..&lt;/p&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &#13;&#10;    &lt;div class=&quot;column&quot; style=&quot;background-color:#666;&quot;&gt;&#13;&#10;        &lt;h2&gt;Column 4&lt;/h2&gt;&#13;&#10;        &lt;p&gt;Some text..&lt;/p&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;
+
+</code></pre>
+
+<p>And again resize our window:</p>
+
+<img src="assets/responsive-columns.gif" alt="">
+
+
+<p>Using media queries in CSS we can:
+
+    <ul>
+        <li>Make content disappear on certain screen size</li>
+        <li>Make them look totally different (size/shape/content/background etc.)</li>
+        <li>Display some content i.e. only on mobile phones</li>
+        <li>Automatically resize media (photo/video) to fill entire space available</li>
+    </ul>
+</p>
+
+<h2>Media query syntax</h2>
+
+<p>A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.
+</p>
+
+<pre><code>
+@media not|only mediatype and (expressions) {
+    CSS-Code;
+    }
+</code></pre>
+
+<p>The result of the query is either <i>true</i> or <i>false</i> which defines whether given style set will be applied by browser or not.
+ </p>
+
+<p>You can define numerous condition in your query like:
+<ul>
+    <li>Targeting different media types -  print/ screen or speech synthesizers</li>
+    <li>Targeting media features like min/max width/height, orientation (landscape/portrait) </li>
+    <li>Use logical operators like NOT or AND </li>
+    <li>And many more....</li>
+</ul>
+
+
+</p>
+
+
+<p>Now you understand how media queries works but we are not going to go much into details. Technically you could write every single line of your website but this is definitely not efficient. Like when you build a house - technically you could first create bricks and use them to build your walls but, it's much faster to get bricks or even whole walls ready from the store and build your house much faster. Especially if you can get them for free... :)  </p>
+
+<p>Note: It is imported for you to understand how media queries works in case you were to deal with some errors on the page. But once you feel confident in using them, you can use libraries - there is no point in reinventing the wheel.  </p>
+
+
+<p>Let's move to the <a href="3-bootstrap-grid.html">bootstrap grid lesson.</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
