@@ -26,9 +26,9 @@ Download and install one of the following browser:
 * [Opera](https://www.opera.com/download)
   
 #### 1.3 Lesson files  
-Download lesson files from [here](https://github.com/mdbootstrap/JS-tutorial-To-Do-List-App-for-beginners/archive/master.zip) and unzip on your computer.
+Download lesson files from [here](https://github.com/mdbootstrap/Bootstrap-tutorial-for-beginners/archive/master.zip) and unzip on your computer.
   
-You will see the following files structre:
+You will see the following files structure:
 
         tutorial/ 
             1-start-here.html
